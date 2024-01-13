@@ -1,0 +1,2 @@
+# Retail-Market-Basket-Analysis-and-customer-churn-prediction
+The project's goal is to solve the problem that many retail giants like Wallmart, Marks &amp; Spencer, Sobeys, Canadian Tire and et al face. Market analysis through apriori algorithm is performed to find product association and then customer churn prediction is done to provide customers lucaritive incentives that will drive the retail sales.
