@@ -93,3 +93,29 @@ Based on Overall Score, customers are segmented into 4 groups: Bronze, Silver, G
 * Our Gold-tier customers showcase strong loyalty to our business, consistently making frequent purchases. In acknowledgment of their commitment, they are eligible for exclusive discounts on their item purchases. Gold Group (40.7% customers) generate 25.6% of our revenue.
 * The Silver-tier customers, characterized by infrequent purchasing behavior,predominantly consist of small-scale business owners.Introduce a loyalty program that rewards them for each purchase, encouraging repeat business. Silver Group (31.3% customers) generate 7.8% of our revenue
 * The Bronze-tier customers have shown a higher likelihood of churning.To proactively address this situation, the marketing department can offer enticing and personalized incentives to retain this group of customers. Implementing targeted campaigns with exclusive and lucrative offers can significantly contribute to retaining their loyalty and preventing churn. Bronze Group (8.89% customers) generate 0.7% of our revenue.
+
+Further the aim is to mine deeper insights by carrying out k-means and Principal Component Analysis (PCA) to form segments of customers.
+Before performing k-means it is required that the data should be distributed normally. However, the RFM features are skewed. 
+All features are projected on logarithmic scale to ensure near normal distribution.
+Co-relation plot of RFM and logarithmic RFM features:
+![image](https://github.com/neelpdesai/Retail-Market-Basket-Analysis-and-Customer-Churn-Prediction/assets/137664550/aa6a6b71-c577-4565-abd4-4c1a9ddeeedb)
+* Frequency is highly correlated with both Monetary and Recency. The similar trend is observed on log scale.
+
+Therefore, it can be infered that the variations observed in the Frequency feature may be elucidated by Recency and Monetary variables. To validate this, it is imperative to conduct Principal Component Analysis (PCA) to explore potential latent insights that may provide a deeper understanding
+
+![image](https://github.com/neelpdesai/Retail-Market-Basket-Analysis-and-Customer-Churn-Prediction/assets/137664550/fa62485b-93f8-4c3e-b6a1-6872435be502)
+
+Graph shows that if we limit number of Principal Components to 2 (i.e PC1 and PC2) then we would be able to explain over 90% of varaince. Hence we limit number of principal components to 2.
+
+After reducing dimensionality, k-means clustering is performed over PC1 and PC2.
+
+Elbow method shows that optimal number of clusters is 2.
+
+![image](https://github.com/neelpdesai/Retail-Market-Basket-Analysis-and-Customer-Churn-Prediction/assets/137664550/602e3f6e-d0cf-4301-8dc7-2a459504e875)
+
+There are 2 major groups of customers based on their RFM behaviour.
+
+On calulating the percentage revenue generate by both the groups following conclusion can be drawn out:
+![image](https://github.com/neelpdesai/Retail-Market-Basket-Analysis-and-Customer-Churn-Prediction/assets/137664550/a7e0a3ae-9640-497a-92e4-2e3ea5b2324c)
+
+* Clustering yields two customer groups, with Cluster Group 2 contributing approximately 87.97% of the total revenue. These customers are loyal customers.These customers are deemed crucial, and offering tailored loyalty incentives is recommended to ensure their retention. In contrast, Cluster Group 1 generates a modest 12.03% of the revenue.There customers are infrequent customers.
