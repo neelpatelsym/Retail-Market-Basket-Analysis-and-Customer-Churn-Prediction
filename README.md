@@ -44,7 +44,7 @@ The Online Retail dataset encompasses all transactions conducted by a UK-based o
 
 ### Market Basket Analysis
 Market Basket Analysis, often employed in retail and e-commerce, is a technique used to identify associations and patterns in customer purchasing behavior. The Apriori Algorithm is a widely used method in this analysis. It operates by identifying frequent itemsets, which are combinations of items frequently bought together.
-<br> ![image](https://github.com/neelpdesai/Retail-Market-Basket-Analysis-and-Customer-Churn-Prediction/assets/137664550/01d0e972-2a5b-4725-841d-953deaa0d59e)
+<br>   ![image](https://github.com/neelpdesai/Retail-Market-Basket-Analysis-and-Customer-Churn-Prediction/assets/137664550/01d0e972-2a5b-4725-841d-953deaa0d59e)
 
 
 <br>The algorithm establishes a set of rules, particularly association rules, which indicate the likelihood of one product being purchased when another is. Key metrics such as support, confidence, and lift are used to evaluate the strength of these rules. Support measures the frequency of occurrence of itemsets, confidence gauges the likelihood of buying a consequent item given the purchase of an antecedent item, and lift indicates how much more likely the purchase of the consequent item is when compared to random chance. Please find below the defination of these key metrics:
@@ -65,3 +65,7 @@ Market Basket Analysis, often employed in retail and e-commerce, is a technique 
 <br>If the rule had a lift of 1, it would imply that the probability of occurrence of the antecedent and that of the consequent are independent of each other. When two events are independent of each other, no rule can be drawn involving those two events. If the lift is > 1, that lets us know the degree to which those two occurrences are dependent on one another, and makes those rules potentially useful for predicting the consequent in future data sets. If the lift is < 1, that lets us know the items are substitute to each other. This means that presence of one item has negative effect on presence of other item and vice versa.
 
 <br>In essence, Market Basket Analysis with the Apriori Algorithm provides valuable insights into product relationships, enabling businesses to make informed decisions about product placement, promotions, and personalized recommendations. This strategic utilization of data can significantly enhance the customer shopping experience and contribute to increased sales and revenue.
+
+<br>The results of the Market Basket Analysis reveal strong connections between items. Given that our business is an e-commerce platform, leveraging these associations during a customer's online shopping experience is strongly advised. Recommending consequent items when a customer purchases an antecedent item can significantly increase the likelihood of selling additional products, leading to a substantial boost in revenue for our online store.
+<br> ![image](https://github.com/neelpdesai/Retail-Market-Basket-Analysis-and-Customer-Churn-Prediction/assets/137664550/757a808c-8b8d-4e8e-966b-6b5a5c310a7c)
+
