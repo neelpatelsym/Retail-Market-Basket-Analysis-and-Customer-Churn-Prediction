@@ -69,3 +69,27 @@ Market Basket Analysis, often employed in retail and e-commerce, is a technique 
 <br>The results of the Market Basket Analysis reveal strong connections between items. Given that our business is an e-commerce platform, leveraging these associations during a customer's online shopping experience is strongly advised. Recommending consequent items when a customer purchases an antecedent item can significantly increase the likelihood of selling additional products, leading to a substantial boost in revenue for our online store.
 <br> ![image](https://github.com/neelpdesai/Retail-Market-Basket-Analysis-and-Customer-Churn-Prediction/assets/137664550/757a808c-8b8d-4e8e-966b-6b5a5c310a7c)
 
+### Customer Churn Analysis
+RFM Analysis (Recency, Frequency, Monetary) is a customer segmentation technique commonly used in retail and e-commerce to understand and categorize customers based on their purchasing behavior. Here's a summary explanation:
+
+* Recency (R): This refers to how recently a customer has made a purchase. It's a measure of the time since the last transaction. Customers who have made a purchase more recently are considered more valuable.
+
+* Frequency (F): This measures how often a customer makes a purchase. It is the total number of transactions within a specific time period. Customers with a higher frequency are often more engaged and loyal.
+
+* Monetary (M): This represents the total monetary value of a customer's purchases. It's a measure of the total amount spent by a customer within a specific time frame. Customers with higher monetary values are 
+                typically high spenders
+
+New features can be formed from RFM feature that possesses numerical categorical value. This feature will further help in segmenting customer to analyse their churn.
+For example Recency_Bucket feature is formed by categorizing Recency feature into 4 quantile groups. The people having lesser Recency value are alloted value 4 while people who bought a considerable time ago are allocated value 2 or 1.
+Similarly Frequency_Bucket and Monetary_Bucket is formed.
+
+OverallScore is obtained by adding Receny_Bucket, Frequency_Bucket and Monetary_Bucket. The higher the OverallScore, the more valuable customer is to the business. For example overall score from 9 to 12 represent a customer group that recently bought item from store and have a behaviour of buying frequently and spending more at the store.
+
+Based on Overall Score, customers are segmented into 4 groups: Bronze, Silver, Gold and Platinum
+
+<br> ![image](https://github.com/neelpdesai/Retail-Market-Basket-Analysis-and-Customer-Churn-Prediction/assets/137664550/bb9522a5-bd56-4ac8-b2b7-a6dcfe9be6c8)
+
+* Customers in the Platinum group hold significant value for our business. They exhibit high frequency and monetary spending, coupled with low recency, making them exceptionally valuable. To express our appreciation and foster loyalty, special incentives and rewards are reserved for these esteemed customers. Platinum Group (19.01% customers) generate 65.9% percent of our revenue.
+* Our Gold-tier customers showcase strong loyalty to our business, consistently making frequent purchases. In acknowledgment of their commitment, they are eligible for exclusive discounts on their item purchases. Gold Group (40.7% customers) generate 25.6% of our revenue.
+* The Silver-tier customers, characterized by infrequent purchasing behavior,predominantly consist of small-scale business owners.Introduce a loyalty program that rewards them for each purchase, encouraging repeat business. Silver Group (31.3% customers) generate 7.8% of our revenue
+* The Bronze-tier customers have shown a higher likelihood of churning.To proactively address this situation, the marketing department can offer enticing and personalized incentives to retain this group of customers. Implementing targeted campaigns with exclusive and lucrative offers can significantly contribute to retaining their loyalty and preventing churn. Bronze Group (8.89% customers) generate 0.7% of our revenue.
