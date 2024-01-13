@@ -22,10 +22,10 @@ The Online Retail dataset encompasses all transactions conducted by a UK-based o
 <br>https://archive.ics.uci.edu/ml/datasets/Online+Retail+II
 
 ### Data Cleaning
-*The granularity of data is based on unique transaction and product combination. 
-*The dataset consists of 541909 records.
-*The number of duplicate and null records are 5225 and 136534 respectively. The number of records after removing null and duplicates is 400150.
-*The purpose for this analysis is to understand customer buying behaviour and based on that we could establish product association rules and targeted marketing strategies.
+* The granularity of data is based on unique transaction and product combination. 
+* The dataset consists of 541909 records.
+* The number of duplicate and null records are 5225 and 136534 respectively. The number of records after removing null and duplicates is 400150.
+* The purpose for this analysis is to understand customer buying behaviour and based on that we could establish product association rules and targeted marketing strategies.
 <br>For this reason it is required to filter out any records that represent product returned or refund from customer.Thus it required to drop records where Quantity<0 and Unit Price <=0. After filtering out such records there was total 392692 records in the dataset.
 * Apart from that the product description for few product items was not uniform. The variation in product description is handled by imputation.
 * Lastly, the data ranges from 1/12/2010 to 8/12/2011. In order to accurately uncover seasonal trends, the 8 records for month of december 2011 is dropped.
